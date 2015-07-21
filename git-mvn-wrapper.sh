@@ -15,6 +15,9 @@ set -e
 maybe_xargs() {
   _in=
   while read _line; do
+    if [ -z "${_line}" ]; then
+      continue
+    fi
     _in="${_line} ${_in}"
   done
   if [ -n "${_in}" ]; then
