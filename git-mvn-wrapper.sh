@@ -69,6 +69,6 @@ else
       | sort -u \
       | xargs echo \
       | tr ' ' ',' \
-      | eval maybe_xargs mvn $@ -amd -pl
+      | maybe_xargs mvn "$@" -amd -pl
   fi
 fi
