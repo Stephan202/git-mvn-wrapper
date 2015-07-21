@@ -63,7 +63,7 @@ else
     # module to which the file belongs. Remove duplicates and join the
     # remaining module directory names with commas. Lastly, instruct Maven to
     # only build modified modules and their dependents.
-    for _file in `git ls-files --modified`; do
+    git ls-files --modified | while read _file; do
       find_module "${_file}"
     done \
       | sort -u \
