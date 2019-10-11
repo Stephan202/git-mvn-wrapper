@@ -25,7 +25,7 @@ else
   else
     # All is well. Perform the optimized Maven execution.
     #
-    # For each modified file, print the root directory of the innermost Maven #
+    # For each modified file, print the root directory of the innermost Maven
     # module to which the file belongs. Remove duplicates and join the
     # remaining module directory names with commas. Lastly, instruct Maven to
     # only build modified modules and their dependents.
